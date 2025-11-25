@@ -1,0 +1,169 @@
+/* --- HALLPASS VIBRANT THEME --- */
+:root {
+  --primary-blue: #0055ff; /* Brighter Blue */
+  --primary-green: #00c853; /* Brighter Green */
+  --primary-dark: #111;    /* darker black */
+  --bg-color: #f2f5fa;
+  --text-main: #000000;    /* Pure black for contrast */
+  --text-muted: #555555;   /* Darker gray for readability */
+  --danger: #ff0040;
+}
+
+body { 
+  margin: 0; 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+  background: var(--bg-color); 
+  color: var(--text-main); 
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { 
+  min-height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.app-container {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.15); /* Stronger shadow */
+  display: flex;
+  flex-direction: column;
+}
+
+.content-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  padding-bottom: 110px;
+}
+
+/* --- VIBRANT COMPONENTS --- */
+.glass-header {
+  padding: 30px 24px 20px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 2px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.glass-header h1 { font-size: 1.6rem; margin: 0; color: black; letter-spacing: -0.5px; }
+.glass-header p { font-size: 0.9rem; color: #444; margin: 4px 0 0 0; font-weight: 500; }
+
+.app-card {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06); /* Deeper shadow */
+  border: 1px solid #e0e0e0; /* Crisper border */
+}
+
+/* --- CLEANER INPUTS --- */
+.input-clean {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+  background: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 16px;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.input-clean:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 4px 12px rgba(0, 85, 255, 0.1);
+  outline: none;
+}
+
+/* --- BUTTONS --- */
+.btn-main {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 800; /* Bolder text */
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  letter-spacing: 0.5px;
+}
+
+.btn-blue { background: var(--primary-blue); color: white; box-shadow: 0 6px 0 #0044cc; transform: translateY(-2px); }
+.btn-blue:active { box-shadow: 0 2px 0 #0044cc; transform: translateY(2px); }
+
+.btn-green { background: var(--primary-green); color: white; box-shadow: 0 6px 0 #009940; transform: translateY(-2px); }
+.btn-green:active { box-shadow: 0 2px 0 #009940; transform: translateY(2px); }
+
+.btn-dark { background: var(--primary-dark); color: white; }
+.btn-red { background: var(--danger); color: white; }
+
+.btn-ghost { 
+  background: white; 
+  color: var(--primary-blue); 
+  border: 2px solid var(--primary-blue);
+  font-weight: 700;
+}
+
+/* --- NAVIGATION --- */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  border-top: 2px solid #f0f0f0;
+  padding: 12px 0 24px;
+  display: flex;
+  justify-content: space-around;
+  z-index: 50;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #888;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav-btn.active { color: var(--primary-blue); }
+.nav-btn.active.guard-theme { color: var(--primary-green); }
+.nav-btn.active.warden-theme { color: var(--primary-dark); }
+
+/* --- STATUS BADGES & UTILS --- */
+.badge { padding: 6px 14px; border-radius: 30px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
+.badge.late { background: #ffebee; color: #d50000; border: 1px solid #ffcdd2; }
+.badge.ok { background: #e8f5e9; color: #1b5e20; border: 1px solid #c8e6c9; }
+.badge.blue { background: #e3f2fd; color: #0d47a1; border: 1px solid #bbdefb; }
+.badge.gray { background: #f5f5f5; color: #616161; border: 1px solid #e0e0e0; }
+
+.scanner-viewport {
+  width: 100%;
+  height: 300px;
+  background: black;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
